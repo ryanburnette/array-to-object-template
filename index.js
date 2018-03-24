@@ -1,8 +1,9 @@
 ;(function() {
-  function _arrayToObjectTemplate(root, schema) {
-    schema.forEach(function (el, i) {
+  function arrayToObjectTemplate(arr) {
+    var obj = {};
+    arr.forEach(function (el, i) {
       if ('string' === typeof el) {
-        root[el] = null;
+        obj[el] = null;
         return;
       }
 
@@ -15,27 +16,23 @@
       }
 
       Object.keys(el).forEach(function (key) {
-        root[key] = _arrayToObjectTemplate({}, el[key]);
+        obj[key] = arrayToObjectTemplate(el[key]);
       });
     });
-    return root;
-  }
-
-  function arrayToObjectTemplate(arr) {
-    return _arrayToObjectTemplate({}, arr)
+    return obj;
   }
   
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = arrayToObjectTemplate
+    module.exports = arrayToObjectTemplate;
   }
   else {
     if (typeof define === 'function' && define.amd) {
       define([], function() {
-        return arrayToObjectTemplate
-      })
+        return arrayToObjectTemplate;
+      });
     }
     else {
-      window.arrayToObjectTemplate = arrayToObjectTemplate
+      window.arrayToObjectTemplate = arrayToObjectTemplate;
     }
   }
 })();
