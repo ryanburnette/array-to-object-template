@@ -13,8 +13,13 @@ describe('arrayToObjectTemplate',function () {
   it('works',function () {
     var from = [ 
       'date',
-      { student: [ 'name', 'cert_number' ] },
-      { instructor: [ 'name', 'cert_number', 'cert_expiration', { foo: ['a','b'] } ] },
+      {
+        student: [
+          'name',
+          'cert_number'
+        ]
+      },
+      { instructor: [ 'name', 'cert_number', 'cert_expiration_date', { foo: ['a','b'] } ] },
       { aircraft: [ 'make', 'model' ] } 
     ]
     var to = {
