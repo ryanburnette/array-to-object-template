@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/ryanburnette/array-to-object-template.git"
   },
-  "author": "Ryan Burnette <ryan.burnette@gmail.com>",
+  "contributors": [
+    "Ryan Burnette <ryan.burnette@gmail.com>",
+    "AJ ONeal <coolaj86@gmail.com>"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ryanburnette/array-to-object-template/issues"
