@@ -1,8 +1,8 @@
-# array to object template
+# array-to-object-template
 
-This is a pretty specific use case, but it goes something like this.
+This library is for a specific use case. It goes something like this.
 
-You give this function an object like this.
+You hand this function an object like this.
 
 ```javascript
 [ 'date',
@@ -11,7 +11,8 @@ You give this function an object like this.
   { aircraft: [ 'make', 'model' ] } ]
 ```
 
-And it returns a template based on that object, assuming everything should be a key... like this.
+And it returns a template based on that object, assuming everything should be a
+key... like this.
 
 ```javascript
 {
